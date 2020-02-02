@@ -32,11 +32,16 @@
       </div>
 
       <div class="text">
-        <h1><span>Kobe</span> Bryant</h1>
-        <h3>Los Angeles Lakers - 24</h3>
+        <h1>
+          <span class="firstname hidetext">Kobe</span
+          ><span class="surname hidetext">Bryant</span>
+        </h1>
+        <h3><span class="hidetext">Los Angeles Lakers - 24</span></h3>
         <p>
-          The most important thing is to try and inspire people<br />
-          so that they can be great in whatever they want to do.
+          <span class="hidetext">
+            The most important thing is to try and inspire people<br />
+            so that they can be great in whatever they want to do.
+          </span>
         </p>
       </div>
 
@@ -48,24 +53,85 @@
     </div>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
-    integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
-  <!-- three js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js"
-    integrity="sha256-3mBEX8I0uMLF7+AUjJeTCelosuorzYpqwBMBPDTyQqY=" crossorigin="anonymous"></script>
-  <!-- hover-effect js -->
-  <script src="./hover-effect.umd.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+      integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U="
+      crossorigin="anonymous"
+    ></script>
+    <!-- three js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js"
+      integrity="sha256-3mBEX8I0uMLF7+AUjJeTCelosuorzYpqwBMBPDTyQqY="
+      crossorigin="anonymous"
+    ></script>
+    <!-- hover-effect js -->
+    <script src="./hover-effect.umd.js"></script>
 
-  <script>
-    new hoverEffect({
-      parent: document.querySelector('.distortion'),
-      intensity: 0.2,
-      image1: './images/1.png',
-      image2: './images/2.png',
-      displacementImage: './images/diss.png',
-      imagesRatio: 380 / 300
-    })
+    <script>
+      new hoverEffect({
+        parent: document.querySelector('.distortion'),
+        intensity: 0.2,
+        image1: './images/1.png',
+        image2: './images/2.png',
+        displacementImage: './images/diss.png',
+        imagesRatio: 380 / 300
+      });
 
+      TweenMax.staggerFrom(
+        '.navbar div',
+        1.5,
+        {
+          delay: 1.5,
+          opacity: 0,
+          y: '20',
+          ease: Expo.easeInOut
+        },
+        0.08
+      );
+
+      TweenMax.staggerFrom(
+        '.media ul li',
+        1.5,
+        {
+          delay: 1.5,
+          opacity: 0,
+          x: '-20',
+          ease: Expo.easeInOut
+        },
+        0.08
+      );
+
+      TweenMax.from('.text h1 .hidetext', 1.5, {
+        delay: 1,
+        x: '-100%',
+        ease: Expo.easeInOut
+      });
+
+      TweenMax.from('.text h3 .hidetext', 1.5, {
+        delay: 1.2,
+        x: '-100%',
+        ease: Expo.easeInOut
+      });
+
+      TweenMax.from('.text p .hidetext', 1.5, {
+        delay: 1.3,
+        x: '-100%',
+        ease: Expo.easeInOut
+      });
+
+      TweenMax.from('.distortion', 1.5, {
+        delay: 2,
+        opacity: 0,
+        y: '20',
+        ease: Expo.easeInOut
+      });
+
+      TweenMax.from(".sponsor img", 1.5, {
+      delay: 1.5,
+      opacity: 0,
+      y: "20",
+      ease: Expo.easeInOut
+    });
     </script>
   </body>
 </html>
