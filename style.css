@@ -119,3 +119,26 @@ ul {
 .sponsor img {
   width: 60px;
 }
+
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  z-index: 99;
+}
+
+.first {
+  background: #5b36c9;
+}
+
+.second {
+  background: #5b36c9;
+  left: 33.3%;
+}
+
+.third {
+  background: #5b36c9;
+  left: 66.6%;
+}
