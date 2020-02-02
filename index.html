@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Kobe Bryant</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:500,600,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="navbar">
+        <div class="menu">
+          <ion-icon name="ios-menu"></ion-icon>
+        </div>
+        <div class="lang">eng</div>
+        <div class="search">
+          <ion-icon name="ios-search"></ion-icon>
+        </div>
+      </nav>
+
+      <div class="media">
+        <ul>
+          <li>facebook</li>
+          <li>instagram</li>
+          <li>twitter</li>
+        </ul>
+      </div>
+
+      <div class="text">
+        <h1><span>Kobe</span> Bryant</h1>
+        <h3>Los Angeles Lakers - 24</h3>
+        <p>
+          The most important thing is to try and inspire people<br />
+          so that they can be great in whatever they want to do.
+        </p>
+      </div>
+
+      <div class="sponsor">
+        <img src="./images/nba-logo.png" alt="NBA Logo" />
+      </div>
+
+      <div class="distortion"></div>
+    </div>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+    integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+  <!-- three js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js"
+    integrity="sha256-3mBEX8I0uMLF7+AUjJeTCelosuorzYpqwBMBPDTyQqY=" crossorigin="anonymous"></script>
+  <!-- hover-effect js -->
+  <script src="./hover-effect.umd.js"></script>
+
+  <script>
+    new hoverEffect({
+      parent: document.querySelector('.distortion'),
+      intensity: 0.2,
+      image1: './images/1.png',
+      image2: './images/2.png',
+      displacementImage: './images/diss.png',
+      imagesRatio: 380 / 300
+    })
+
+    </script>
+  </body>
+</html>
